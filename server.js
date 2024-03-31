@@ -6,6 +6,10 @@ const express = require('express')
 const app = express();
 
 const db = require('./db');
+require('dotenv').config();
+
+const PORT =process.env.PORT || 3000;
+
 
 
 const bodyParser = require('body-parser');
@@ -19,7 +23,6 @@ const personRoutes = require('./Routes/personRoutes');
 //use
 app.use('/MenuItems',menuItemsRoutes);
 app.use('/person',personRoutes);
-
 
 
 
