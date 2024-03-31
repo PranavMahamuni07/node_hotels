@@ -8,9 +8,11 @@ const app = express();
 const db = require('./db');
 require('dotenv').config();
 
-const PORT =process.env.PORT || 3000;
 
-
+app.get('/',(req,res)=>{
+    console.log("conncted")
+    res.status(200).json({message:"WELCOME TO THE HOTEL !!!"});
+})
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json())
